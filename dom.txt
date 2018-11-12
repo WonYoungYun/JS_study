@@ -1,0 +1,20 @@
+
+
+
+.innerHTML //태그를 쓴다면 태그가 먹혀서 출력
+.innerText //텍스트만 출력
+documnet.getElementById("")
+document.getElementsByClassName("")
+document.getElementsByTagName("")
+
+.addEventListener("click", function)//클릭했을때
+.addEventListener("DOMContentLoaded", function)//모든 html이 불러졌을떄
+.addEventListener("online", function)//인터넷이 연결중일떄
+.addEventListener("offline", function)//인터넷과의 연결이 끊어졌을때
+
+.classList.add("")//클래스추가
+.classList.remove("")//클래스 제거
+.classList.contains("")//포함하는가?
+.classList.toggle("")//토글
+
+.preventDefault()

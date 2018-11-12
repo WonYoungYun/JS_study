@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+html,body{
+    margin:0;
+    padding:0;
+}
+body{
+    color:#d00;
+    transition: color 0.5s ease-in-out
+}
+img{
+    vertical-align: top;
+}
+
+li{
+    list-style: none;
+}
+.form,
+.greetings{
+    display: none;
+}
+
+.showing{
+    display: block
+}
+.bgImage{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-9999;
+    width: 100%;
+    height:100%;
+    animation: fadeIn .5s linear;
+}
+
+@keyframes fadeIn{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
