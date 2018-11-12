@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1 class="title">ToDo List</h1>
+            <h2>Welcome! <span class="userName">Name</span></h4>
+            <div class="location">
+                <p class="date">12:23</p>
+                <p class="weather">sunny pusan</p>
+            </div>
+
+        </div>
+        <div id="content">
+            <form class="inputToDo">
+                <input type="text" placeholder="해야 할 일을 적어봅시다."><button type="button"><i class="fas fa-pen"></i></button>
+            </form>
+            <ul class="todoList">
+                <li class="">본문을 누르면 체크됨 <span class="delBtn"><i class="fas fa-eraser"></i></span></li>
+                <li class="">본문을 누르면 체크됨 <span class="delBtn"><i class="fas fa-eraser"></i></span></li>
+            </ul>
+        </div>
+
+    </div>
+        <img id="bgImage" src="./img/1.jpg" alt="배경이미지">
+    <script src="./js/app.js"></script>
+</body>
+</html>
