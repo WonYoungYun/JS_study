@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
-<body>
+<body >
     <div id="wrap">
         <div id="header">
             <h1 class="title">ToDo List</h1>
-            <h2>Welcome! <span class="userName">Name</span></h4>
+            <h2 >Welcome! <span class="userName">Name</span></h4>
             <div class="location">
                 <p class="time">12:23</p>
                 <p class="weather">sunny pusan</p>
@@ -28,9 +28,21 @@
                 <li>본문을 누르면 체크됨 <span class="delBtn"><i class="fas fa-eraser"></i></span></li>
             </ul>
         </div>
+        <div class="modal shadow">
+            <div class="modal-title">
+                <h2>당신의 이름을 알려주세요.</h2>
+            </div>
+            <div class="modal-body">
+                <input type="text" placeholder="내 이름은...">
+            </div>
+            <div class="modal-footer">
+                <button type="button"><i class="fas fa-plus"></i></button>
+            </div>
 
+        </div>
     </div>
-        <img id="bgImage" src="./img/2.jpg" alt="배경이미지">
-        <script type="module" src="./js/app.js"></script>
+
+    <img id="bgImage" src="./img/2.jpg" alt="배경이미지">
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>
