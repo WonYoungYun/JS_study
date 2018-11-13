@@ -1,5 +1,5 @@
-// import MainController from './controllers/MainController.js'
+import clock from './components/clock.js'
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    // MainController.init();
+    clock.init();
 })
