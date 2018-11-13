@@ -5,11 +5,19 @@ const TODOS_LS = 'toDos'
 
 let toDos = []
 
+function checkToDo(){
+    const check = event.target
+    console.dir(check.classList)
+    if(check.classList[0] !== 'checked'){
+        check.classList.add('checked')
+    } else{
+        check.classList.remove('checked')
+    }
+    console.log(check)
+}
 function deleteToDo(){
-    
     const btn = event.target
     const li = btn.parentNode.parentNode
-    console.log(li)
     toDoList.removeChild(li)
     const cleanToDos = toDos.filter(toDo=>{
         return toDo.id !== parseInt(li.id)
@@ -25,20 +33,18 @@ function paintTodo(text){
     const eraser = document.createElement('i')
     eraser.classList.add('fas')
     eraser.classList.add('fa-eraser')
-
-    // const eraser = '<i class="fas fa-eraser"></i>'
     const newId = toDos.length +1;
     delBtn.classList.add('delBtn')
     span.innerText = text
     delBtn.appendChild(eraser)
     li.appendChild(span)
     li.appendChild(delBtn)
+    span.addEventListener("click", checkToDo)
     eraser.addEventListener("click", deleteToDo)
     li.id = newId;
 
     toDoList.appendChild(li)
     const toDoObj = {
-        done: false,
         text,
         id: newId
     }
