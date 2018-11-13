@@ -22,7 +22,10 @@ a:hover,a:active,a:focus{text-decoration: underline}
     font-family: 'Noto Sans KR', sans-serif;
 }
 #header{
-    color: #000;
+    color:#fff;
+     text-shadow:
+        5px 5px 5px rgba(0,0,0);
+
 }
 #header .title{
     font-size: 3.3em;
@@ -72,7 +75,7 @@ a:hover,a:active,a:focus{text-decoration: underline}
     width: 13%;
     height: 100%;
     border:0;
-    background:#224277;
+    background:#e43737;
     outline: none;
     font-size:1.2em;
     color:#fff;
@@ -107,7 +110,7 @@ a:hover,a:active,a:focus{text-decoration: underline}
 #content .todoList .delBtn{
     float:right;
     padding-right: .9em;
-    color:red;
+    color: #e43737;
     cursor: pointer
 }
 
@@ -165,7 +168,7 @@ a:hover,a:active,a:focus{text-decoration: underline}
     width: 10%;
     height: 60%;
     font-size:1.2em;
-    background:#224277;
+    background:#e43737;
     outline: none;
     color:#fff;
     border: 0;
