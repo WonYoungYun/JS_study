@@ -5,6 +5,7 @@ const form = modal.querySelector(".inputName")
 const input = form.querySelector("input")
 const modalBg = document.querySelector(".modal-bg")
 const userName = document.querySelector(".userName")
+const button = modal.querySelector('button')
 
 const USER_NAME = "currentUser"
 const SHOW_CHANGE = "showing"
@@ -27,7 +28,9 @@ function handleSubmit(e){
 function askUserName(){
     modal.classList.add(SHOW_CHANGE)
     modalBg.classList.add(SHOW_CHANGE)
-    form.addEventListener("submit", handleSubmit)  
+    form.addEventListener("submit", handleSubmit)
+    button.addEventListener("click", handleSubmit)
+
 }
 
 function loadName(){
