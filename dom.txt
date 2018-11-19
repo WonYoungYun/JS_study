@@ -11,10 +11,13 @@ document.getElementsByTagName("")
 .addEventListener("DOMContentLoaded", function)//모든 html이 불러졌을떄
 .addEventListener("online", function)//인터넷이 연결중일떄
 .addEventListener("offline", function)//인터넷과의 연결이 끊어졌을때
+.addEventListener("mousemove", function)//마우스의 움직임에 따라
 
 .classList.add("")//클래스추가
 .classList.remove("")//클래스 제거
 .classList.contains("")//포함하는가?
 .classList.toggle("")//토글
 
-.preventDefault()
+.nextElementSibling//다음 요소를 선택
+
+.preventDefault()//이벤트를 취소할 수 있는 경우, 이벤트의 전파를 막지않고 그 이벤트를 취소

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        #gc {
+            width: 640;
+            height: 480;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="gc">
+
+    </canvas>
+    <script>
+        let p1y = p2y = 40
+        let pt = 10
+        let ph = 100
+        let bx = by = 50
+        let bd = 6
+        let xv = yv = 4
+        let score1 = score2 = 0
+
+        let ais = 2
+
+
+        const field = document.getElementById('gc')
+        const ctx = field.getContext('2d')
+
+        function reset() {
+            bx = field.width / 2
+            by = field.height / 2
+            xv = -xv
+            yx = 3
+        }
+
+        function update() {
+            bx += xv;
+            by += yv
+            if (by < 0 && yv < 0) {
+                yv = -yv
+            }
+            if (by > field.height && yv > 0) {
+                yv = -yv
+            }
+            if (bx < 0) {
+                if (by > p1y && by < p1y + ph) {
+                    xv = -xv
+                    dy = by - (p1y + ph / 2)
+                    yv = dy * 0.3
+                } else {
+                    score2++;
+                    reset();
+                }
+            }
+            if (bx > field.width) {
+                if (by > p2y && by < p2y + ph) {
+                    xv = -xv
+                    dy = by - (p2y + ph / 2)
+                    yv = dy * 0.3
+                } else {
+                    score1++;
+                    reset();
+                }
+            }
+            if (p2y + ph / 2 < by) {
+                p2y += ais
+            } else {
+                p2y -= ais
+            }
+
+            ctx.fillStyle = 'black'
+            ctx.fillRect(0, 0, field.width, field.height)
+            ctx.fillStyle = 'white'
+            ctx.fillRect(0, p1y, pt, ph)
+            ctx.fillRect(field.width - pt, p2y, pt, ph)
+            ctx.fillRect(bx - bd / 2, by - bd / 2, bd, bd)
+            ctx.fillText(score1, 100, 100)
+            ctx.fillText(score2, field.width - 100, 100)
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setInterval(update, 1000 / 30)
+            field.addEventListener('mousemove', e => {
+                p1y = e.clientY - ph / 2
+            })
+        })
+    </script>
+</body>
+
+</html>
