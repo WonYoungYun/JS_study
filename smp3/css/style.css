@@ -75,6 +75,7 @@ a {
     top: 0;
     width: 100%;
     height: 60px;
+    margin: 0 auto;
     padding: 0 80px;
     box-sizing: border-box;
     display: flex;
@@ -114,7 +115,7 @@ a {
 .wrap_header #menu .menu_nav li .link_list {
     display: block;
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 1.4em;
     line-height: 59.5px;
 }
 
@@ -151,7 +152,7 @@ a {
     flex-direction: column;
     text-align: center;
     padding: 40px;
-    font-size: 16px;
+    font-size: 1.4em;
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-left: -1px;
@@ -172,7 +173,7 @@ a {
 }
 
 .wrap_header .language .lang_list li {
-    font-size: 14px;
+    font-size: 1.2em;
     margin-left: 20px;
 }
 
@@ -189,8 +190,8 @@ a {
 
 
 #visual {
-    max-width: 1760px;
-    height: 500px;
+    width: 100%;
+    height: 750px;
 }
 
 .slide {
@@ -206,9 +207,50 @@ a {
 
 .slide .slide_list .slide_item {
     position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
     padding: 60px 80px;
+    box-sizing: border-box;
+    z-index: 0;
+    transition: all 0.5s linear
+}
+
+.slide .slide_list .showing {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide .slide_list .slide_item .page_info {
+    position: absolute;
+    width: 30px;
+    left: 100%;
+    top: 100%;
+}
+
+.slide .slide_list .slide_item .page_title {
+    margin-bottom: 30px;
+    font-size: 2.4em;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.slide .slide_list .slide_item .detail_button {
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.slide .slide_list .slide_item .detail_button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.slide .slide_list .slide_item .detail_button span {
+    margin-left: 10px;
 }
 
 .slide .slide_list .slide_item:nth-child(1) {
@@ -245,10 +287,4 @@ a {
 
 .hide {
     display: none;
-}
-
-.showing {
-    opacity: 1;
-    transform: none;
-    z-index: 1
 }
