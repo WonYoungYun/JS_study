@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+/*reset*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Malgun Gothic", Dotum, AppleGothic, sans-serif;
+    font-size: 12px;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.nav a {
+    position: absolute;
+    left: 0;
+    top: -9999em;
+    z-index: 9999;
+    display: block;
+    width: 100%;
+    background-color: navy;
+    color: #efefef;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2;
+}
+
+.nav a:focus {
+    top: 0;
+}
+
+#wrap {
+    width: 100%;
+}
+
+.wrap_header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    line-height: 20px;
+}
+
+.wrap_header:hover {
+    background-color: #efefef;
+
+}
+
+.wrap_header a {
+    color: #000;
+}
+
+.wrap_header #menu {
+    height: 100%;
+}
+
+.wrap_header #menu .menu_nav {
+    height: 100%;
+}
+
+.wrap_header #menu .menu_nav:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.wrap_header #menu .menu_nav li {
+    float: left;
+}
+
+.wrap_header #menu .menu_nav li .link_list {
+    display: block;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 59.5px;
+}
+
+
+.wrap_header #menu .menu_nav li .sub_list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    padding: 0 80px;
+    background-color: #efefef;
+}
+
+.wrap_header #menu .menu_nav .show_list:hover .link_list {
+    border-bottom: 1px solid black;
+}
+
+.wrap_header #menu .menu_nav .show_list:hover div {}
+
+.wrap_header #menu .menu_nav .show_list:hover .sub_list {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.wrap_header #menu .menu_nav .show_list:hover .sub_list li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-left: -1px;
+    line-height: 20px;
+}
+
+.wrap_header #menu .menu_nav .show_list:hover .sub_list li a {
+    margin-top: 20px;
+}
+
+.wrap_header #menu .menu_nav .show_list:hover .sub_list li a:hover {
+    text-decoration: underline;
+
+}
+
+.wrap_header .language .lang_list {
+    display: flex;
+}
+
+.wrap_header .language .lang_list li {
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.wrap_header .language .lang_list li:hover {
+    font-weight: bold;
+}
+
+.wrap_header .language .lang_list li.lang_selected {
+    font-weight: bold;
+}
+
+
+
+
+
+#visual {
+    max-width: 1760px;
+    height: 500px;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide .slide_list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .slide_list .slide_item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 60px 80px;
+}
+
+.slide .slide_list .slide_item:nth-child(1) {
+    background-image: url("../img/fantasy.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide .slide_list .slide_item:nth-child(2) {
+    background-image: url("../img/winter.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide .slide_list .slide_item:nth-child(3) {
+    background-image: url("../img/wolf.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide .slide_list .slide_item .page_info {
+    position: relative;
+}
+
+.slide .slide_list li {}
+
+.screen_out {
+    position: absolute;
+    left: -9999em;
+}
+
+.hide {
+    display: none;
+}
+
+.showing {
+    opacity: 1;
+    transform: none;
+    z-index: 1
+}
