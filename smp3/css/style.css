@@ -189,6 +189,7 @@ a {
 }
 
 #visual {
+    position: relative;
     width: 100%;
     height: 750px;
 }
@@ -275,6 +276,25 @@ a {
 
 .slide .slide_list .slide_item .page_info {
     position: relative;
+}
+
+.slide_button {
+    position: absolute;
+    top: 50%;
+    border: 0;
+    outline: 0;
+    z-index: 2;
+    font-size: 2em;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.prev {
+    left: 2%;
+}
+
+.next {
+    left: 97%;
 }
 
 .container {
