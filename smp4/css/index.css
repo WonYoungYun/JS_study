@@ -1,0 +1,115 @@
+header {}
+
+input:focus {
+    outline: none
+}
+
+button:focus {
+    outline: none
+}
+
+header .header_area {
+    padding: 8px 12px 8px 0;
+    font-size: 1.5em;
+    background-color: #3b4891;
+}
+
+header .header_area .logo {
+    float: left;
+    display: block;
+    width: 45px;
+    height: 40px;
+    background: url('../img/sp_header.png');
+    background-position: -68px -49px;
+    transform: scale(0.5)
+}
+
+
+header .header_area fieldset {
+    height: 35px;
+    border: 1px solid #283267;
+    background-color: #fff;
+}
+
+header .header_area fieldset .search_box {
+    position: relative;
+    height: 100%;
+    padding: 3px 125px 4px 35px;
+    box-sizing: border-box;
+}
+
+header .header_area fieldset .search_box a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 100%;
+    background: url('../img/sp_header.png');
+    background-position: 0 0;
+    transform: scale(0.5)
+}
+
+header .header_area fieldset .search_box input {
+    border: none;
+    border-left: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 3px;
+    box-sizing: border-box;
+}
+
+header .header_area fieldset .search_box .rt {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header_area fieldset .search_box .rt .clear {
+    width: 35px;
+    height: 35px;
+    background: url('../img/sp_header.png');
+    background-position: -37px -43px;
+    border: none;
+    transform: scale(0.55)
+}
+
+header .header_area fieldset .search_box .rt #search_submit {
+    width: 36px;
+    height: 42px;
+    background: url('../img/sp_header.png');
+    background-position: -1px -43px;
+    border: none;
+    transform: scale(0.6)
+}
+
+header .header_area fieldset .search_box .rt .gall_visited {
+    height: 80%;
+    padding: 0 8px;
+    color: #1e1e1e;
+    background-color: #fff;
+    border: none;
+    border-left: 1px solid #ccc;
+}
+
+header .header_area fieldset .search_box:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+}

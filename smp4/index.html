@@ -1,15 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
+<header>
+    <div class="header_area">
+        <a href="#" class="logo">
+            <span class="blind">로고</span>
+        </a>
+        <form action="" method="post">
+            <fieldset class="field_search">
+                <legend class="blind">통합검색</legend>
+                <div class="search_box">
+                    <a href="#" class="lf">
+                        <span class="blind">목록</span>
+                    </a>
+                    <input type="text" id="search_gall" placeholder="통합검색" autocomplete=off>
+                    <div class="rt">
+                        <button class="clear">
+                            <span class="blind">내용없애기</span>
+                        </button>
+                        <button type="submit" id="search_submit">
+                            <span class="blind">검색</span>
+                        </button>
+                        <button type="button" class="gall_visited">
+                            <span>최근방문</span>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
 
-<body>
-    <p>hello</p>
-</body>
+    </div>
+    <div class="nav">
+        <a href="#">갤러리 +</a>
+        <a href="#">m.갤러리</a>
+        <a href="#">뉴스</a>
+        <a href="#">이벤트</a>
+        <a href="#">위키</a>
+        <a href="#">만두몰</a>
+    </div>
+</header>
+<section>
+    <div class="content">
+        <div class="content_header">
+            <a href="#" class="gallery">
+                <h3>중세게임</h3>
+                <span></span>
+                <span class="gallery_count">(6,669,310)</span>
+            </a>
+            <div class="gall_lnk">
+                <a href="#">연관</a>
+                <a href="#">차단</a>
+                <a href="#">글쓰기</a>
+            </div>
+        </div>
+        <div class="content_body">
+            <div class="tab">
+                <ul class="tab_list">
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">개념글</a></li>
+                    <li><a href="#">공지</a></li>
+                </ul>
+            </div>
+            <div class="detail_sel_box">
+                <label for>게시글 수</label>
+                <select class="sel">
+                    <option value="30" selected>30개</option>
+                    <option value="50" selected>50개</option>
+                    <option value="100" selected>100개</option>
+                    <option value="150" selected>150개</option>
+                </select>
+            </div>
+            <div class="gall_header_list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>설문</span>
+                            가족 리스크 호되게 당한 스타는?
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>공지</span>
+                            갤러리 공지사항
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>개념</span>
+                            겟앰프드 스킨 레전드.jpg
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gall_content">
+                <ul class="gall_detail_list">
+                    <li>
+                        <a href="#" class="lt">
+                            <span class="subject"><span></span><span class="title_txt">게시글1번</span></span>
+                            <div class="ginfo">
+                                <span>oo(223.39)</span>
+                                <span>15:55</span>
+                                <span>조회 25</span>
+                                <span>추천 0</span>
+                            </div>
+                        </a>
+                        <a href="rt">
+                            <span class="count">1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="lt">
+                            <span class="subject"><span></span><span class="title_txt">게시글2번</span></span>
+                            <div class="ginfo">
+                                <span>oo(223.39)</span>
+                                <span>15:55</span>
+                                <span>조회 25</span>
+                                <span>추천 0</span>
+                            </div>
+                        </a>
+                        <a href="rt">
+                            <span class="count">1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="lt">
+                            <span class="subject"><span></span><span class="title_txt">게시글3번</span></span>
+                            <div class="ginfo">
+                                <span>oo(223.39)</span>
+                                <span>15:55</span>
+                                <span>조회 25</span>
+                                <span>추천 0</span>
+                            </div>
+                        </a>
+                        <a href="rt">
+                            <span class="count">1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="lt">
+                            <span class="subject"><span></span><span class="title_txt">게시글4번</span></span>
+                            <div class="ginfo">
+                                <span>oo(223.39)</span>
+                                <span>15:55</span>
+                                <span>조회 25</span>
+                                <span>추천 0</span>
+                            </div>
+                        </a>
+                        <a href="rt">
+                            <span class="count">1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="lt">
+                            <span class="subject"><span></span><span class="title_txt">게시글5번</span></span>
+                            <div class="ginfo">
+                                <span>oo(223.39)</span>
+                                <span>15:55</span>
+                                <span>조회 25</span>
+                                <span>추천 0</span>
+                            </div>
+                        </a>
+                        <a href="rt">
+                            <span class="count">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gall_group">
+                <div class="paging">
+                    <a href class="prev"><span>&gt;</span><span class="blind">이전</span></a>
+                    <span class="paging_inner">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </span>
+                    <a href class="prev"><span>&gt;</span><span class="blind">다음</span></a>
+
+                </div>
+            </div>
+            <div>
+                <div class="btn-area">
+                    <button class="btn_gray">개념글보기</button>
+                    <button class="btn_blue">글쓰기</button>
+                </div>
+            </div>
+            <div>
+                <div class="crawling">
+                    <div class="craw_tab">
+                        <ul class="craw_tab_list">
+                            <li><a href="#" class="selected">오늘의 이슈</a></li>
+                            <li><a href="#">실시간 검색어</a></li>
+                        </ul>
+                    </div>
+                    <div class="craw_content">
+                        <ul class="craw_content_list">
+                            <li><a href="#">크롤링1</a></li>
+                            <li><a href="#">크롤링2</a></li>
+                            <li><a href="#">크롤링3</a></li>
+                            <li><a href="#">크롤링4</a></li>
+                            <li><a href="#">크롤링5</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer_top">
+        <a href="#">즐겨찾기</a>
+        <a href="#">이용안내</a>
+        <a href="#">PC버전</a>
+        <a href="#">맨 위로<span></span></a>
+    </div>
+    <div class="footer_bottom">
+        <div class="footer_util">
+            <a href="#">회사소개</a>
+            <a href="#">광고안내</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+        </div>
+        <div class="copyright">
+            <p>Copyright(c)</p>
+        </div>
+    </div>
+
+</footer>
 
 </html>
