@@ -1,11 +1,16 @@
 header {}
 
+body {
+    min-width: 320px;
+}
+
+
 input:focus {
-    outline: none
+    outline: none;
 }
 
 button:focus {
-    outline: none
+    outline: none;
 }
 
 header .header_area {
@@ -19,11 +24,10 @@ header .header_area .logo {
     display: block;
     width: 45px;
     height: 40px;
-    background: url('../img/sp_header.png');
+    background: url("../img/sp_header.png");
     background-position: -68px -49px;
-    transform: scale(0.5)
+    transform: scale(0.5);
 }
-
 
 header .header_area fieldset {
     height: 35px;
@@ -44,9 +48,9 @@ header .header_area fieldset .search_box a {
     top: 0;
     width: 35px;
     height: 100%;
-    background: url('../img/sp_header.png');
+    background: url("../img/sp_header.png");
     background-position: 0 0;
-    transform: scale(0.5)
+    transform: scale(0.5);
 }
 
 header .header_area fieldset .search_box input {
@@ -56,7 +60,7 @@ header .header_area fieldset .search_box input {
     height: 100%;
     font-size: 14px;
     line-height: 1.5;
-    padding: 0 3px;
+    padding: 0 5px;
     box-sizing: border-box;
 }
 
@@ -73,19 +77,21 @@ header .header_area fieldset .search_box .rt {
 header .header_area fieldset .search_box .rt .clear {
     width: 35px;
     height: 35px;
-    background: url('../img/sp_header.png');
+    background: url("../img/sp_header.png");
     background-position: -37px -43px;
     border: none;
-    transform: scale(0.55)
+    transform: scale(0.55);
+    cursor: pointer;
 }
 
 header .header_area fieldset .search_box .rt #search_submit {
     width: 36px;
     height: 42px;
-    background: url('../img/sp_header.png');
+    background: url("../img/sp_header.png");
     background-position: -1px -43px;
     border: none;
-    transform: scale(0.6)
+    transform: scale(0.6);
+    cursor: pointer;
 }
 
 header .header_area fieldset .search_box .rt .gall_visited {
@@ -95,14 +101,248 @@ header .header_area fieldset .search_box .rt .gall_visited {
     background-color: #fff;
     border: none;
     border-left: 1px solid #ccc;
+    cursor: pointer;
 }
 
 header .header_area fieldset .search_box:after {
-    content: '';
+    content: "";
     display: block;
-    clear: both
+    clear: both;
 }
 
+header .visited {
+    width: 100%;
+}
+
+header .visited .visited_tab .tab_list {
+    display: flex;
+    background-color: #f1f4f8;
+}
+
+header .visited .visited_tab .tab_list li {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0 7px;
+}
+
+header .visited .visited_tab .tab_list li a {
+    display: block;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+header .visited .visited_slider {
+    width: 100%;
+}
+
+header .visited .visited_slider .no_list {
+    text-align: center;
+    font-size: 14px;
+    line-height: 150px;
+    background-color: #fff;
+}
+
+header .visited .visited_tab .tab_list .selected {
+    border-bottom: 2px solid #4b58a7;
+    box-sizing: border-box
+}
+
+header .visited .visited_tab .tab_list .selected a {
+    color: #4b58a7;
+}
+
+header .visited .visited_btn {
+    width: 100%;
+    background-color: #f1f4f8;
+    height: 34px;
+}
+
+header .visited .visited_btn span {
+    float: right;
+}
+
+header .visited .visited_btn .visited_close {
+    display: inline-block;
+    width: 37px;
+    height: 22px;
+    color: #555;
+    text-align: center;
+    line-height: 20px;
+    margin: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+
+}
+
+header .visited .visited_btn:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .visited {
+    border: 1px solid #ccc;
+}
+
+header .nav {
+    height: 36px;
+    line-height: 37px;
+}
+
+header .nav ul {
+    width: 100%;
+    display: flex;
+}
+
+header .nav li {
+    flex: 1;
+    background-color: #3b4891
+}
+
+header .nav li a {
+    display: block;
+    width: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+section {
+    width: 100%;
+}
+
+section .content .content_header {
+    width: 100%;
+    height: 40px;
+    padding: 8px 8px;
+    border: 2px solid #f1f4f8;
+    box-sizing: border-box;
+
+}
+
+section .content .content_header .gallery {
+    float: left;
+    display: block;
+
+}
+
+section .content .content_header .gallery:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section .content .content_header .gallery div {
+    display: flex;
+}
+
+section .content .content_header .gallery div h3 {
+    font-size: 1.3em;
+}
+
+section .content .content_header .gallery div .m_logo {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #000;
+    margin: 0 3px;
+    padding: 1px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: auto;
+}
+
+section .content .content_header .gallery div .gall_count {
+    padding-top: 1px;
+    color: #aaa;
+}
+
+
+section .content .content_header .gall_lnk {
+    float: right;
+}
+
+section .content .content_body .tab {
+    width: 100%;
+    height: 36px;
+    border-bottom: 2px solid #f1f4f8;
+    box-sizing: border-box
+}
+
+section .content .content_body .tab .tab_list {
+    display: flex;
+}
+
+section .content .content_body .tab .tab_list li {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+
+}
+
+section .content .content_body .tab .tab_list li a {
+    display: block;
+    border-left: 1px solid #f1f4f8;
+    border-right: 1px solid #f1f4f8;
+}
+
+section .content .content_body .tab .tab_list .selected {
+    border-bottom: 2px solid #3b4891;
+    box-sizing: border-box;
+}
+
+section .content .content_body .tab .tab_list .selected a {
+    color: #3b4891
+}
+
+section .content .content_body .tab .tab_list .gall_info {
+    font-weight: normal;
+    text-align: right;
+    padding: 8px 8px 8px 0
+}
+
+section .content .content_body .detail_sel_box {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    border-bottom: 2px solid #f1f4f8;
+}
+
+section .content .content_body .detail_sel_box>div {
+    position: absolute;
+
+    right: 0;
+    top: 25%;
+}
+
+section .content .content_body .detail_sel_box>div select {
+    margin-right: 10px;
+    border: none
+}
+
+section .content .content_body .gall_header_list ul {
+    border-bottom: 1px solid #f1f4f8
+}
+
+section .content .content_body .gall_header_list ul li {
+    height: 36px;
+    border-bottom: 1px solid #f1f4f8;
+}
+
+section .content .content_body .gall_header_list ul li a {
+    display: block;
+    padding: 12px;
+    box-sizing: border-box
+}
+
+section .content .content_body .gall_header_list ul li a span {
+    padding: 2px 5px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-radius: 50%;
+}
 
 .blind {
     position: absolute;

@@ -41,7 +41,8 @@ select,
 button,
 table {
     font-family: 'Malgun Gothic', Dotum, AppleGothic, sans-serif;
-    font-size: 12px
+    font-size: 12px;
+    font-weight: bold;
 }
 
 img,
@@ -68,11 +69,12 @@ address {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    color: #000;
 }
 
 a:hover,
 a:active,
 a:focus {
-    text-decoration: underline
+    text-decoration: none
 }
