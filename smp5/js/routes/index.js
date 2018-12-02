@@ -2,10 +2,21 @@ const express = require('express')
 const router = express.Router()
 const template = require('../lib/template.js')
 
+
+// router.get("/page", (req, res) => {
+//     res.redirect("/")
+// })
+
+
 router.get("/", (req, res) => {
     let title = "메인 페이지";
     let list = template.list(req.list);
-    let html = template.HTML(title, list, ``, `<a href="/page/create">글 쓰기</a>`);
+    let html = template.HTML(title, list, ``,
+        `
+            <div class="create_btn">
+                <a href="/page/create">글쓰기</a>
+            </div>
+        `);
     res.send(html);
 });
 

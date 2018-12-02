@@ -8,26 +8,34 @@ const template = require('../lib/template.js')
 
 
 
-
 router.get("/create", (req, res) => {
   fs.readdir('data', (err, filelist) => {
     let title = "글쓰기";
-    let list = template.list(filelist);
+    // let list = template.list(filelist);
     let html = template.HTML(
       title,
-      list,
+      '',
       `
-          <form action="/page/create" method="post">
-            <p><input type="text" name="title" placeholder="title"></p>
-            <p>
-              <textarea name="description" placeholder="description"></textarea>
-            </p>
-            <p>
-              <input type="submit">
-            </p>
-          </form>
+      <div class="create_page">
+        <div class="write_logo">
+            <h2>글쓰기</h2>
+        </div>
+        <form action="/page/create" method="post">
+          <div class="page_title">
+            <input type="text" name="title" placeholder="제목" autocomplete="off">
+          </div>
+          <div class="page_description">
+            <textarea name="description" placeholder="내용"></textarea>
+          </div>
+          <div class="btn_tab">
+            <button  type="button" class="cancel_btn">취소</button>
+            <button type="submit" class="submit_btn"> 등록</button>
+          </div>
+        </form>
+        <script src="/js/create.js"></script>
+    </div>
         `,
-      ""
+      ''
     );
     res.send(html);
   });
