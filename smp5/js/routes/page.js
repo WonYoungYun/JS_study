@@ -60,18 +60,27 @@ router.get("/update/:page_id", (req, res) => {
         title,
         list,
         `
-            <form action="/page/update" method="post">
-              <input type="hidden" name="id" value="${title}">
-              <p><input type="text" name="title" placeholder="title" value="${title}"></p>
-              <p>
-                <textarea name="description" placeholder="description">${description}</textarea>
-              </p>
-              <p>
-                <input type="submit">
-              </p>
-            </form>
+        <div class="create_page">
+        <div class="write_logo">
+            <h2>글쓰기</h2>
+        </div>
+        <form action="/page/create" method="post">
+          <div class="page_title">
+          <input type="hidden" name="id" value="${title}">
+            <input type="text" name="title" placeholder="제목" value="${title}" autocomplete="off ">
+          </div>
+          <div class="page_description">
+            <textarea name="description" placeholder="내용">${description}</textarea>
+          </div>
+          <div class="btn_tab">
+            <button  type="button" class="cancel_btn">취소</button>
+            <button type="submit" class="submit_btn"> 등록</button>
+          </div>
+        </form>
+        <script src="/js/create.js"></script>
+    </div>
             `,
-        `<a href="/page/create">create</a> <a href="/page/update/${title}">update</a>`
+        ``
       );
       res.send(html);
     });
@@ -118,13 +127,28 @@ router.get("/:page_id", (req, res, next) => {
         let html = template.HTML(
           sanitizedTitle,
           list,
-          `<h2>${sanitizedTitle}</h2>${sanitizedDescription}`,
-          ` <a href="/page/create">create</a>
-            <a href="/page/update/${sanitizedTitle}">update</a>
+          `
+          <div class="page">
+            <h2>${sanitizedTitle}</h2>
+            <div class="description">
+              <span>${sanitizedDescription}</span>
+            </div>
+          </div>
+          `,
+          `
+            <div class="page_tag">
             <form action="/page/delete" method="post">
               <input type="hidden" name="id" value="${sanitizedTitle}">
-              <input type="submit" value="delete">
-            </form>`
+              <input type="submit" class="del_btn" value="삭제">
+            </form>
+            <div class="update_btn">
+              <a href="/page/update/${sanitizedTitle}">수정</a>
+            </div>
+            <div class="crt_btn"> 
+              <a href="/page/create">글쓰기</a>
+            </div>
+            </div>
+            `
         );
         res.send(html);
       }

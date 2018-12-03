@@ -13,6 +13,7 @@ router.get("/", (req, res) => {
     let list = template.list(req.list);
     let html = template.HTML(title, list, ``,
         `
+            <h2>게시판</h2>
             <div class="create_btn">
                 <a href="/page/create">글쓰기</a>
             </div>

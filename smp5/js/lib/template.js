@@ -9,6 +9,7 @@ module.exports = {
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <link rel="stylesheet" href="/css/index.css">
             <link rel="stylesheet" href="/css/create.css">
+            <link rel="stylesheet" href="/css/page.css">
             <title>${title}</title>
         </head>
         <body>
@@ -19,12 +20,13 @@ module.exports = {
         <div id="wrap">
             <div class="content">
                 ${body}
+                <div class="bar">
+                ${control}
+            </div>
                 <div class="page_list">
                     ${list}
                 </div>
-                <div class="bar">
-                    ${control}
-                </div>
+
             </div>
         </div>
         <hr class="hide">
@@ -38,7 +40,6 @@ module.exports = {
                 </a>
             </div>
         </footer>
-
         </body>
         </html>
       `;
