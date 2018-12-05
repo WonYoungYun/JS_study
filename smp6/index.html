@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -14,6 +14,24 @@
         <header>
             <h2 class="container">검색</h2>
         </header>
+
+        <div class="container">
+            <form action="">
+                <input type="text" placeholder="검색어를 입력하세요" autofocus>
+                <button type="reset" class="btn-reset"></button>
+            </form>
+
+            <div class="content">
+                <ul id="tabs" class="tabs">
+                    <li>추천 검색어</li>
+                    <li>최근 검색어</li>
+                </ul>
+                <div id="search-result">
+
+                </div>
+            </div>
+        </div>
+
     </div>
     <script type="module" src="./js/app.js"></script>
 </body>

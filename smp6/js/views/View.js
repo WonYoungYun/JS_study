@@ -16,6 +16,7 @@ export default {
         const evt = new CustomEvent(event, {
             detail: data
         })
+        //커스텀 이벤트로 이벤트를 만들고 디스패치이벤트로 이벤트를 날림
         this.el.dispatchEvent(evt)
         return this
     },
