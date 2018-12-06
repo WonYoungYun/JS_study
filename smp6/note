@@ -1,3 +1,12 @@
 mvc패턴을 사용
 
  
+
+event.target과
+event.currentTarget
+
+<div onclick ="event">
+    <span>test</span>
+</div>
+의 경우 targer은 span을 가르키고
+currentTarget은 div를 가르킨다

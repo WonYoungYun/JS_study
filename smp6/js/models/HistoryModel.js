@@ -5,12 +5,17 @@ const tag = ['']
 
 export default {
     data: [{
-        keyword: '검색기록1',
-        date: '12.03'
-    }, {
-        keyword: '검색기록2',
-        date: '12.04'
-    }],
+            keyword: '검색기록1',
+            date: '12.03'
+        }, {
+            keyword: '검색기록2',
+            date: '12.04'
+        },
+        {
+            keyword: '검색기록3',
+            date: '12.05'
+        }
+    ],
 
     list() {
         return Promise.resolve(this.data)

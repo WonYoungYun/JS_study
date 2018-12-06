@@ -41,5 +41,9 @@ FormView.onClickReset = function (e) {
     this.showResetBtn(false)
 }
 
+FormView.setValue = function (value = '') {
+    this.inputEl.value = value
+    this.showResetBtn(this.inputEl.value)
+}
 
 export default FormView
