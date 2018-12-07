@@ -5,15 +5,16 @@ const tag = ['']
 
 export default {
     data: [{
-            keyword: '검색기록1',
-            date: '12.03'
-        }, {
             keyword: '검색기록2',
-            date: '12.04'
+            date: '12.03'
         },
         {
-            keyword: '검색기록3',
-            date: '12.05'
+            keyword: '검색기록1',
+            date: '12.02'
+        },
+        {
+            keyword: '검색기록0',
+            date: '12.01'
         }
     ],
 
@@ -30,7 +31,7 @@ export default {
         }
         //검색기록을 받고 검색기록 리스트와 비교해서 있다면 기존 검색기록 리스트 삭제 후 추가
         const date = '12.31'
-        this.date = [{
+        this.data = [{
             keyword,
             date
         }, ...this.data]

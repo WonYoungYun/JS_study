@@ -4,6 +4,11 @@ const tag = '[ResultView]'
 
 const ResultView = Object.create(View)
 
+
+ResultView.messages = {
+    NO_RESULT: '검색 결과가 없습니다.'
+}
+
 ResultView.setup = function (el) {
     this.init(el)
 }
@@ -13,6 +18,7 @@ ResultView.setup = function (el) {
 ResultView.render = function (data = []) {
     console.log(tag, 'render()', data)
     this.el.innerHTML = data.length ? this.getSearchResulHtml(data) : '검색 결과가 없습니다'
+    this.show()
 }
 
 ResultView.getSearchResulHtml = function (data) {

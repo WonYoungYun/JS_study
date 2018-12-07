@@ -19,7 +19,7 @@ export default {
             .on('@reset', () => this.onResetForm())
         //chaining을 통해 on함수를 사용하기 위해 FormView의 Setup은 this를 return 해야 한다.
         TabView.setup(document.querySelector('#tabs'))
-            .on('@change', e => this.onChangeTab(e.detail.TabName))
+            .on('@change', e => this.onChangeTab(e.detail.tabName))
 
         KeywordView.setup(document.querySelector('#search-keyword'))
             .on('@click', e => this.onClickKeyword(e.detail.keyword))
@@ -29,7 +29,7 @@ export default {
             .on('@remove', e => this.onRemoveHistory(e.detail.keyword))
         ResultView.setup(document.querySelector('#search-result'))
 
-        this.selectedTab = '최근 검색어'
+        this.selectedTab = '추천 검색어'
         this.renderView()
 
 
@@ -42,11 +42,12 @@ export default {
 
         if (this.selectedTab === '추천 검색어') {
             this.fetchSearchKeyword()
+            HistoryView.hide()
         } else {
             this.fetchSearchHistory()
+            KeywordView.hide()
         }
 
-        TabView.show()
         ResultView.hide()
     },
     fetchSearchKeyword() {
@@ -63,12 +64,9 @@ export default {
     },
 
     search(query) {
-        console.log(tag, 'search()', query)
-
         FormView.setValue(query)
-
+        HistoryModel.add(query)
         //FormView에서 enter를 통해 controller로 이벤트를 전달, 컨트롤러는 @submit이벤트에 연결된 onSubmit실행, onSubmit에서 search를 통해 onSearchResult를 호출하여 ResultView에 Render함
-
 
         //SearchModel의 list가 Promise기 때문에 then을 통해 onSearchResult가능
         SearchModel.list(query).then(data => {
@@ -90,13 +88,13 @@ export default {
         TabView.hide()
         KeywordView.hide()
         HistoryView.hide()
-        console.log(tag, data)
         ResultView.render(data)
-        ResultView.show()
     },
 
     onChangeTab(tabName) {
-        console.log(tag, 'onChageTab()')
+        console.log(tabName)
+        this.selectedTab = tabName
+        this.renderView()
     },
 
     onClickKeyword(keyword) {

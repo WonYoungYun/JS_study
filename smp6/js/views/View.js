@@ -28,7 +28,6 @@ export default {
 
     show() {
         this.el.style.display = ''
-        console.log(tag, 'show()', this)
         return this
     }
 }

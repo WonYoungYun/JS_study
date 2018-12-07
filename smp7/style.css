@@ -1,0 +1,166 @@
+/*reset*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Malgun Gothic", Dotum, AppleGothic, sans-serif;
+  font-size: 12px;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+}
+
+body {
+  background-color: #f1f4f8;
+}
+
+#wrap {
+}
+
+header {
+  position: relative;
+  height: 90px;
+  padding-top: 5px;
+  box-sizing: border-box;
+  background-color: #5bc8e6;
+}
+
+header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .header-logo {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.search-movie {
+  position: relative;
+  display: block;
+  margin: 0 15px;
+  box-sizing: border-box;
+}
+
+.search-movie input {
+  width: 100%;
+  height: 35px;
+  padding: 0 40px 0 10px;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  border: none;
+}
+
+.search-movie input:focus {
+  outline: none;
+}
+
+.btn-reset {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+  border-radius: 50%;
+  background-color: #ccc;
+  padding: 2px 6px;
+  color: #fff;
+  border: none;
+}
+
+.btn-reset::before {
+  content: "X";
+}
+
+.btn-tabs {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.btn-side {
+  padding: 13px 17px;
+  background-color: #5bc8e6;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-side:focus {
+  outline: none;
+}
+
+.btn-side::before {
+  content: "list";
+}
+
+.content-nav {
+  background-color: #fff;
+}
+
+.content-nav .tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-nav .tabs li {
+  width: 33.33%;
+  height: 45px;
+  margin: 0 20px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  line-height: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.selected {
+  color: #5bc8e6;
+  border-bottom: 2px solid #5bc8e6;
+}
+.blind {
+  display: none;
+}

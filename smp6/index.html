@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <header>
-            <h2 class="container"><a href="/smp6/index.html">검색</a></h2>
-        </header>
+      <header><h2 class="container">검색</h2></header>
 
-        <div class="container">
-            <form action="">
-                <input type="text" placeholder="검색어를 입력하세요" autofocus>
-                <button type="reset" class="btn-reset"></button>
-            </form>
+      <div class="container">
+        <form action="">
+          <input type="text" placeholder="검색어를 입력하세요" autofocus />
+          <button type="reset" class="btn-reset"></button>
+        </form>
 
-            <div class="content">
-                <ul id="tabs" class="tabs">
-                    <li>추천 검색어</li>
-                    <li>최근 검색어</li>
-                </ul>
-                <div id="search-keyword"></div>
-                <div id="search-history"></div>
-                <div id="search-result"></div>
-            </div>
+        <div class="content">
+          <ul id="tabs" class="tabs">
+            <li>추천 검색어</li>
+            <li>최근 검색어</li>
+          </ul>
+          <div id="search-keyword">
+            <p>2018-01-11</p>
+            <ul>
+              <li>
+                <span class="list_number"> 1</span>신과함께
+                <span class="movie_date"></span>
+              </li>
+            </ul>
+          </div>
+          <div id="search-history"></div>
+          <div id="search-result"></div>
         </div>
-
+      </div>
     </div>
     <script type="module" src="./js/app.js"></script>
-</body>
-
+  </body>
 </html>
