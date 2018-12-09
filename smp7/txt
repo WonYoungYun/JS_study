@@ -1,0 +1,22 @@
+오늘의 영화
+
+영화인들
+영화사들
+
+
+content-nav//영화목록 영화사목록 영화인 목록
+검색했을때는 안보이게, 눌럿을때는 selected
+
+search-result//검색한 영화 결과 출력
+영화명 국문 movieNm
+영화명 영문 movieNmEn	
+개봉연도 openDt	
+영화장르 genreAlt
+영화감독 directors
+제작국가 nationAlt
+
+movie-list//영화목록을 눌렀을떄 출력\
+
+office-list//영화사 목록을 눌렀을 떄 출력
+
+actor-list//영화인 목록을 눌렀을 떄 출력
