@@ -15,7 +15,7 @@
       <div class="header-logo">
         <h1>Movie</h1>
       </div>
-      <form action="">
+      <form action="" onsubmit="return false;">
         <span class="search-movie">
           <input type="text" placeholder="영화 제목을 입력해주세요" autofocus />
           <button type="reset" class="btn-reset"></button>
@@ -36,27 +36,7 @@
     </nav>
     <div class="container">
       <div class="search-result">
-        <div class="movie-title">
-          <h3 class="movieNm">영화명 국문</h3>
-          <p class="movieNmEn">영화명 영문</p>
-        </div>
-        <div class="movie-detail">
-          <dl>
-            <dt>장르</dt>
-            <dd>
-              <span class="genreAlt">액션</span>
-            </dd>
-            <dt>제작</dt>
-            <dd>
-              <span class="nationAlt">미국</span>
-            </dd>
-            <dt>개봉</dt>
-            <dd><span class="openDt">2015.01.01</span></dd>
-            <dt>감독</dt>
-            <dd><span class="directors">감독</span></dd>
-          </dl>
 
-        </div>
       </div>
       <div class="movie-list">
         <h3 class="today">2018-01-01</h3>
@@ -76,8 +56,8 @@
       <div class="actor-list"></div>
     </div>
   </div>
-  <!-- <script type="module" src="./js/app.js"></script> -->
-  <!-- <script src="./js/test.js"></script> -->
+  <script type="module" src="./js/app.js"></script>
+  <!-- <script type="module" src="./js/test.js"></script> -->
 </body>
 
 </html>
