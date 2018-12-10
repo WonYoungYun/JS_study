@@ -16,5 +16,14 @@ export default {
         })
         this.el.dispatchEvent(evt)
         return this
+    },
+    hide() {
+        this.el.style.display = 'none'
+        return this
+    },
+
+    show() {
+        this.el.style.display = ''
+        return this
     }
 }

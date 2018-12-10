@@ -12,9 +12,11 @@ export default {
             .on('@submit', e => this.onSubmit(e.detail.input))
             .on('@reset', () => this.onResetForm())
         ResultView.setup(document.querySelector('.search-result'))
+
+        this.renderView()
     },
     renderView() {
-        console.log('renderView()')
+        ResultView.hide()
     },
     search(query) {
         FormView.setValue(query)
@@ -23,12 +25,10 @@ export default {
         })
     },
     onSubmit(input) {
-        console.log(tag, 'OnSubmit', input)
         this.search(input)
     },
 
     onResetForm() {
-        console.log(tag, 'OnResetForm')
         this.renderView()
     },
     onSearchResult(data) {
