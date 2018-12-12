@@ -87,7 +87,7 @@ header {
   height: 90px;
   padding-top: 5px;
   box-sizing: border-box;
-  background-color: #5bc8e6;
+  background-color: #fde0cf;
 }
 
 header::after {
@@ -144,7 +144,7 @@ header .header-logo {
 
 .btn-side {
   padding: 13px 17px;
-  background-color: #5bc8e6;
+  background-color: #fde0cf;
   border: none;
   cursor: pointer;
 }
@@ -262,8 +262,8 @@ header .header-logo {
 }
 
 .selected {
-  color: #5bc8e6;
-  border-bottom: 2px solid #5bc8e6;
+  color: #b38974;
+  border-bottom: 2px solid #b38974;
 }
 
 .blind {
