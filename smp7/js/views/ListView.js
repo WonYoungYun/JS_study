@@ -29,7 +29,7 @@ ListView.getListHtml = function (data) {
 }
 ListView.getListItemHtml = function (item) {
     return `
-        <li>
+        <li data-keyword="${item.movieNm}">
             <span class="movie-rank">${item.rank} </span>${item.movieNm}<span class="movie-date">${item.openDt}</span>
         </li>
     `

@@ -167,7 +167,7 @@ header .header-logo {
 }
 
 .content-nav .tabs li {
-  width: 33.33%;
+  width: 50%;
   height: 45px;
   margin: 0 20px;
   box-sizing: border-box;
@@ -258,6 +258,22 @@ header .header-logo {
   float: right;
   line-height: 2.2;
   color: #ccc
+}
+
+.actor-list ul {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  line-height: 50px;
+  text-align: center;
+}
+
+.actor-list li {
+  background-color: #fff1f4;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .selected {
