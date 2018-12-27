@@ -15,8 +15,3 @@ search-result//검색한 영화 결과 출력
 영화감독 directors
 제작국가 nationAlt
 
-movie-list//영화목록을 눌렀을떄 출력\
-
-office-list//영화사 목록을 눌렀을 떄 출력
-
-actor-list//영화인 목록을 눌렀을 떄 출력
