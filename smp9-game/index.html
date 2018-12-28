@@ -9,33 +9,36 @@
   </head>
   <body>
       <header>
-            <h1 id="title">Kill Monster</h2>
+            <h1 id="title"><a href="./index.html">Kill Monster</a></h2>
       </header>
     <div id="wrap">
       
       <div id="screen">
-        <div id="user" style="display:none">
-          <form action=""><input type="text" autocomplete="off" placeholder="당신의 이름을 입력하세요." maxlength="8" />
-            <button class="user_input_button">입력</button></form>
+        <div id="user">
+          <form action="" ><input type="text" autocomplete="off" placeholder="이름을 입력하세요." maxlength="8" />
+            <button>입력</button></form>
         </div>
         <div id="game_play">
 
-            <div id="monster">이름: monster Hp: 1/1 Xp: 1/1 att:10
+            <div id="monster">
                 </div>
-          <div id="message">메시지</div>
-          <div id="hero">이름: man Hp: 1/1 Xp: 1/1 att:10
+          <div id="message"></div>
+          <div id="hero">
             </div>  
         </div>
-        <div id="game_menu" style="display:none"><button id="start_button" >Game Start</button>
-        <button id="restart_button" >Restart</button></div>
+        <div id="game_menu"><button class="start_button" >Game Start</button>
+        </div>
+        <div id="continue_menu">
+          <h3 class="count_message">당신이 잡은수</h3>
+          <button class="restart_button" >Restart?</button>
+        </div>
       </div>
 
       <div id="battle_menu">
-          <ul class="hero_action">
-              <li>공격</li>
-              <li>전투기술</li>
-              <li>발차기</li>
-              <li>도주</li>
+          <ul id="hero_action">
+              <li class="1">공격</li>
+              <li class="2">전투기술</li>
+              <li class="3">발차기</li>
           </ul>
       </div>
     </div>
